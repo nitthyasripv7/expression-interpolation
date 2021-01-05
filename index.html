@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang=en ng-app='expinter'>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <head>
+        <title>expression and interpolation</title>
+    </head>
+    <body ng-controller='expression'>
+        <h1>EXPRESSION AND INTERPOLATION</h1>
+        <div>
+            message is :{{message}} <br>
+            {{saymessage()}} <br>
+           custom filter  : {{saylovesmessage()}} <br>
+           truth :{{saylovesmessage()| truth :"nitth" :"sri"}}<br>   <!--pass extra arguments--> 
+           big truth :{{saylovesmessage()| truth :"nitth" :"sri" | uppercase}}   <!--chaining filter in html -->
+        </div>
+        <div>
+            <button ng-click="feednitth()">feed nitth</button>
+            cookie cost:{{cookiecost|currency:"#blah":"3"}}
+            <br>
+            <img ng-src="images/nitthya_{{stateofbeing}}.png">
+        </div>
+    </body>
+
+</html>
